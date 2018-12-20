@@ -1,0 +1,96 @@
+<br />
+<h2> Brew2u Checkout</h2>
+<br />
+<!-- <form>
+  <mat-form-field>
+    <mat-select placeholder="Select Coffee Shop" [(ngModel)]="selectedStore" name="storeName">
+      <mat-option *ngFor="let store of stores.storeName" [value]="storeName">
+        {{storeName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p> Selected Store: {{selectedStore}} </p>
+</form> -->
+<table>
+    <tr>
+      <th style="text-align:left;" colspan="1">Delete</th>
+      <th style="text-align:left;" colspan="1">Item</th>
+      <th style="text-align:left;" colspan="1">Size</th>
+      <th style="text-align:left;" colspan="2">Price</th>
+      <th style="text-align:right;" colspan="1">Quantity</th>
+      <th style="text-align:right;" colspan="1">Subtotal</th>
+    </tr>
+    <tr *ngFor="let item of items">
+      <td style="text-align:center;" colspan="1">
+          <button (click)="remove(item.product.id)">X</button>
+      </td>
+      <td>{{item.product.drinkName}}</td>
+      <td style="text-align:right;" colspan="1">{{item.product.drinkSize }}</td>
+      <td style="text-align:right;" colspan="2">${{item.product.price | number:'1.2-2' }}</td>
+      <td style="text-align:right;" colspan="1">{{item.quantity | number:'1.0-0' }}</td>
+      <td style="text-align:right;" colspan="1">${{item.product.price * item.quantity | number:'1.2-2' }}</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;" colspan="6">Subtotal: </td>
+      <td style="text-align:right;">${{subtotal | number:'1.2-2'}}</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;" colspan="6">Sales Tax: </td>
+      <td style="text-align:right;">${{ Tax | number:'1.2-2'}}</td>
+    </tr>
+  <tr>
+      <td style="text-align:right;" colspan="6">Delivery Fee: </td>
+      <td style="text-align:right;"> ${{ delivery | number:'1.2-2' }}</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;" colspan="6">Total: </td>
+      <td style="text-align:right;"> ${{ total | number:'1.2-2'}}</td>
+    </tr>
+  </table>
+  <button mat-raised-button color='warn' (click)="submitCart()">Place Order!</button>    
+  <br />
+  <button mat-stroked-button routerLink="/menu">return to menu</button>
+  <br />
+  <!-- <br /> -->
+  <button mat-stroked-button (click)="clearCart()">empty the cart</button>
+  
+
+
+  <!-- 
+<table>
+  <tr>
+    <th style="text-align:left;" colspan="1">Delete</th>
+    <th style="text-align:left;" colspan="1">Item</th>
+    <th style="text-align:left;" colspan="1">Size</th>
+    <th style="text-align:left;" colspan="2">Price</th>
+    <th style="text-align:right;" colspan="1">Quantity</th>
+    <th style="text-align:right;" colspan="1">Subtotal</th>
+  </tr>
+  <tr *ngFor="let item of items">
+    <td style="text-align:center;" colspan="1">
+      <button (click)="remove(item.product.id)">X</button>
+    </td>
+    <td>{{item.product.drinkName}}</td>
+    <td style="text-align:right;" colspan="1">{{item.product.drinkSize }}</td>
+    <td style="text-align:right;" colspan="2">${{item.product.price | number:'1.2-2' }}</td>
+    <td style="text-align:right;" colspan="1">{{item.quantity | number:'1.0-0' }}</td>
+    <td style="text-align:right;" colspan="1">${{item.product.price * item.quantity | number:'1.2-2' }}</td>
+  </tr>
+  <tr>
+    <td style="text-align:right;" colspan="6">Subtotal: </td>
+    <td style="text-align:right;">${{subtotal | number:'1.2-2'}}</td>
+  </tr>
+  <tr>
+    <td style="text-align:right;" colspan="6">Sales Tax: </td>
+    <td style="text-align:right;">${{ Tax | number:'1.2-2'}}</td>
+  </tr>
+  <tr>
+    <td style="text-align:right;" colspan="6">Delivery Fee: </td>
+    <td style="text-align:right;"> ${{ delivery | number:'1.2-2' }}</td>
+  </tr>
+  <tr>
+    <td style="text-align:right;" colspan="6">Total: </td>
+    <td style="text-align:right;"> ${{ total | number:'1.2-2'}}</td>
+  </tr>
+   <button mat-raised-button color='warn' (click)="submitCart()">Place Order!</button>
+</table> -->

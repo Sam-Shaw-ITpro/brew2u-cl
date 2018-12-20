@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    z-index: -1;
+    font-family: 'Roboto', sans-serif;
+    opacity: .85;
+    background-image: url("../src/assets/med.png");
+    width: 100%;
+    min-height: 680px;
+    /* height: 680px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    z-index: 0;
+    opacity: 100 !important;
+}
+
+p  {
+    z-index: 0;
+    opacity: 100 !important;
+}
+
+b  {
+    z-index: 0;
+    opacity: 100 !important;
+}

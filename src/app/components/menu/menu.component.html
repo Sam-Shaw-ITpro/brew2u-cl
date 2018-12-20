@@ -1,0 +1,35 @@
+<!-- <table mat-table>
+      <td mat-cell *ngFor="let d of products">
+  <button [routerLink]="['/cart', { id:d.id } ]">
+    {{ d.drinkName }}<br />
+    ({{d.drinkSize}})<br />
+    ${{ d.price }}
+  </button>
+    </td>
+</table> -->
+
+<!--         
+<p *ngFor="let d of products">
+  <button [routerLink]="['/cart', { id:d.id } ]">Add<br>
+    {{ d.drinkName }}<br>({{d.drinkSize}})<br>${{ d.price }}
+  </button>
+</p> -->
+<!--   
+    </section>
+  </mat-card-content>
+    </mat-card>
+  -->
+  <br />
+<b> What Coffee Shops do we work with? </b>
+<br />
+<button mat-raised-button routerLink="/displaystores">Coffee Shops</button>
+<br>
+<br>
+<b>OUR COFFEE MENU</b>
+<p *ngFor="let d of products">
+  <button mat-mini-fab  [routerLink]="['/cart', { id:d.id } ]">+</button>
+  {{ d.drinkName }} ({{d.drinkSize}}) ${{ d.price }}
+</p>
+<button mat-raised-button routerLink="/cart">go to cart</button>
+<button mat-raised-button (click)="clearCart()">empty the cart</button>
+<br />

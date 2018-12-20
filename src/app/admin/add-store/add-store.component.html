@@ -1,0 +1,43 @@
+<!-- <button mat-raised-button (click)="updateStore(d.id, d.storeName, d.streetAddress, d.storeState, d.storeCity, d.storeZip, d.storePhone, d.storeHours)">Update Store</button> -->
+<mat-card>
+    <form>
+        <mat-form-field appearance="outline">
+            <mat-label>storeName</mat-label>
+            <input matInput type="test" placeholder="storeName" [(ngModel)]="storeName" name="storeName" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>streetAddress</mat-label>
+            <input matInput placeholder="streetAddress" [(ngModel)]="streetAddress" name="streetAddress" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>storeState</mat-label>
+            <input matInput placeholder="storeState" [(ngModel)]="storeState" name="storeState" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>storeCity</mat-label>
+            <input matInput placeholder="storeCity" [(ngModel)]="storeCity" name="storeCity" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>storeZip</mat-label>
+            <input matInput placeholder="storeZip" [(ngModel)]="storeZip" name="storeZip" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>storePhone</mat-label>
+            <input matInput placeholder="storePhone" [(ngModel)]="storePhone" name="storePhone" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>storeHours</mat-label>
+            <input matInput placeholder="storeHours" [(ngModel)]="storeHours" name="storeHours">
+        </mat-form-field>
+
+        <mat-card-actions>
+            <button mat-raised-button (click)="addNewStore(storeName, streetAddress, storeState, storeCity, storeZip, storePhone, storeHours)">Add Store</button>
+        </mat-card-actions>
+    </form>
+</mat-card>

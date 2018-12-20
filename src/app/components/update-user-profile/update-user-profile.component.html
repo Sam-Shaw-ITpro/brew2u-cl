@@ -1,0 +1,47 @@
+<p>
+    Update user profile for username: {{ user.username }}
+</p>
+<mat-card>
+    <form>
+        <mat-form-field appearance="outline">
+            <!-- <label>Email Address</label> -->
+            <input matInput type="email" placeholder="{{user.email}}" [(ngModel)]="user.email" name="email" required>
+        </mat-form-field>
+        <!-- <label>First Name</label> -->
+        <mat-form-field appearance="outline">
+                <!-- <label>First Name</label> -->
+            <input matInput placeholder="{{user.firstName}}" [(ngModel)]="user.firstName" name="firstName" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{user.lastName}}" [(ngModel)]="user.lastName" name="lastName" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{user.userAddress }}" [(ngModel)]="user.userAddress" name="userAddress" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{ user.userSecondAddress }}" [(ngModel)]="user.userSecondAddress" name="userSecondAddress">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{user.userCity }}" [(ngModel)]="user.userCity" name="userCity">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{ user.userState }}" [(ngModel)]="user.userState" name="userState">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{user.userZipcode }}" [(ngModel)]="user.userZipcode" name="userZipcode">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput type="tel" placeholder="{{user.phoneNumber }}" [(ngModel)]="user.phoneNumber" name="phoneNumber">
+        </mat-form-field>
+        <mat-card-actions>
+            <button mat-raised-button (click)="updateUser(user.id, user.email, user.username, user.password, user.firstName, user.lastName, user.userAddress, user.userSecondAddress, user.userCity, user.userState, user.userZipcode, user.phoneNumber, user.isAdmin)">UPDATE</button>
+        </mat-card-actions>
+    </form>
+</mat-card>

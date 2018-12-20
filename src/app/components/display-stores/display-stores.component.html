@@ -1,0 +1,18 @@
+
+<mat-card>
+<mat-card-actions>
+<button mat-raised-button  routerLink="/menu" >return to the menu</button>
+</mat-card-actions>
+</mat-card>
+<!-- <mat-card>
+<p *ngFor="let store of store"> {{ store.storeName }}</p>
+</mat-card>
+</mat-card-actions> -->
+<mat-card>
+<p *ngFor="let store of store"> {{ store.storeName }} <br>
+        {{ store.streetAddress }} {{ storeCity }} {{ store.storeZip }}<br>
+        {{ store.storePhone }}<br>
+        {{ store.storeHours }}
+
+</p>
+    </mat-card>

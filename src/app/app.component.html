@@ -1,0 +1,19 @@
+<div class="header">
+  <a href="/home"><img src="../assets/logo.png" alt="logo" style="width:200px;"></a>
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item routerLink="/menu">coffee menu</button>
+     <button mat-menu-item routerLink="/about">about us</button>
+    <button mat-menu-item routerLink="/cart">cart</button>
+    <button mat-menu-item routerLink="/checkout">checkout</button>
+      <button mat-menu-item routerLink="/userprofile">profile</button>
+    <button mat-menu-item routerLink="/register">register</button>
+    <button mat-menu-item routerLink="/home">login</button>
+     <button mat-menu-item routerLink="/register">sign up!</button>
+    <button mat-menu-item routerLink="/admin">admin</button>
+    <button mat-menu-item (click)="logout()">logout</button>
+  </mat-menu>
+     <button mat-raised-button [matMenuTriggerFor]="appMenu">
+        <img src="../assets/baseline_list_black_18dp.png" alt="icon" style="float:right;width:40px;">
+    </button>
+</div>
+<router-outlet></router-outlet>

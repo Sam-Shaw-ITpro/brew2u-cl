@@ -1,0 +1,66 @@
+<mat-card>
+    <form>
+        <mat-form-field appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <input matInput type="email" placeholder="Email Address" [(ngModel)]="email" name="email" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="User name" [(ngModel)]="username" name="username" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" [(ngModel)]="password" name="password" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name" [(ngModel)]="firstName" name="firstName" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" [(ngModel)]="lastName" name="lastName" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Address" [(ngModel)]="userAddress" name="userAddress" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Apt / Suite</mat-label>
+            <input matInput placeholder="Apt / Suite" [(ngModel)]="userSecondAddress" name="userSecondAddress">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="City" [(ngModel)]="userCity" name="userCity" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>State</mat-label>
+            <input matInput placeholder="example: IN" [(ngModel)]="userState" name="userState" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Zip Code</mat-label>
+            <input matInput placeholder="Zip Code" [(ngModel)]="userZipcode" name="userZipcode" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>317-555-5555</mat-label>
+            <input matInput type="tel" placeholder="317-555-5555" [(ngModel)]="phoneNumber" name="phoneNumber" required>
+        </mat-form-field>
+
+        <mat-slide-toggle color="primary" [checked]="false" [disabled]="true" [(ngModel)]="isAdmin" name="isAdmin" required>
+            Administrator
+        </mat-slide-toggle>
+
+        <mat-card-actions>
+            <button mat-raised-button (click)="register(email, username, password, firstName, lastName, userAddress, userSecondAddress, userCity, userState ,userZipcode, phoneNumber, isAdmin)">Register</button>
+        </mat-card-actions>
+    </form>
+</mat-card>

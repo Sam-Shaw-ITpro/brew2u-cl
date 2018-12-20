@@ -1,0 +1,32 @@
+<!-- <mat-card>
+   
+    <form (submit)="onSubmit();" action="https://formspree.io/darealmvc@gmail.com" method="POST">
+            <mat-form-field appearance="outline">
+            <mat-label>Your Name</mat-label>
+            <input matInput placeholder="contactname" [(ngModel)]="contactname" name="name" required>
+             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <!-- <mat-hint>myusername</mat-hint> -->
+          <!-- </mat-form-field>
+          <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="email address" [(ngModel)]="contactemail" name="contactemail" required>
+            </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Your Message</mat-label>
+            <textarea matInput placeholder="message" [(ngModel)]="message" name="name" rows="8" required>
+            </textarea>
+                 <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <!-- <mat-hint>mypassword</mat-hint> -->
+          <!-- </mat-form-field>
+        </form>
+        <mat-card-actions>
+        <button mat-raised-button (click)="sendmessage()">SEND</button>
+       </mat-card-actions>
+    </mat-card> --> 
+
+
+    <form method="POST" action="https://formspree.io/darealmvc@gmail.com">
+        <input type="email" name="email" placeholder="Your email">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button mat-stroked-button type="submit">Send</button>
+      </form>

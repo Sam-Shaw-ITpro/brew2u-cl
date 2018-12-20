@@ -1,0 +1,44 @@
+<mat-card-actions>
+        <button mat-raised-button routerLink="/admin/useradmin">User Admin</button>
+        <button mat-raised-button routerLink="/admin/orderadmin">Order Admin</button>
+        <button mat-raised-button routerLink="/admin/storesadmin">Store Admin</button>
+    <br />
+    <br />
+    <!-- THIS WORKS!!! -->
+    <!-- {{ this.stores.stores | json }} -->
+
+    <!-- {{ this.onestore | json }} -->
+
+    <button mat-raised-button (click)="addStore()">ADD A STORE</button>
+</mat-card-actions>
+<mat-card>
+<p *ngFor="let store of store"> {{ store.storeName }} <br>
+        {{ store.streetAddress }} {{ storeCity }} {{ store.storeZip }}<br>
+        {{ store.storePhone }}<br>
+        {{ store.storeHours }}
+        <!-- {{ store.storeName }} -->
+        <!-- {{ store.storeName }} -->
+<!-- 
+
+        storeCity: "Fishers"
+        storeHours: "Monday: 7AM-2PM Tuesday: 7AM-2PM Wednesday: 7AM-2PM Thursday: 7AM-2PM Friday: 7AM-2PM Saturday: 7AM-2PM Sunday: 7AM-2PM"
+        storeName: "Another Broken Egg Cafe"
+        storePhone: "317-570-1002"
+        storeState: "Indiana"
+        storeZip: 46038
+        streetAddress: "8626 E 116th St #175" -->
+
+
+
+    <!-- <mat-card> -->
+        <!-- <form> -->
+            <mat-card-actions>
+                <button mat-raised-button (click)="gotoUpdate(store.id)">UPDATE</button>
+            <!-- </mat-card-actions>
+            <mat-card-actions> -->
+                <button mat-raised-button (click)="deleteStore(store.id)">DELETE</button>
+            </mat-card-actions>
+        <!-- </form> -->
+    <!-- </mat-card> -->
+</p>
+</mat-card>

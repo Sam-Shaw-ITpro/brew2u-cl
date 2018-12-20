@@ -1,0 +1,22 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<h1> Welcome {{ user.username }}!</h1>
+
+  <h3>Profile Info/Account Info</h3>
+<p>
+Username: {{ user.username }}
+<br>
+Name: {{ user.firstName }} {{ user.lastName }}
+<br>
+Phone Number: {{ user.phoneNumber }}
+<br>
+Address: {{ user.userAddress }} {{ user.userSecondAddress }} 
+<br>
+{{ user.userCity }}, {{ user.userState }} {{ user.userZipcode }}
+</p>
+<button mat-raised-button routerLink="/updateuser">Update Profile?</button>
+<br />
+<br />
+
+<b> Last 5 items ordered : </b>
+<p *ngFor="let d of order | reverse | slice:0:5; let i=index"  > {{ d.drinkName }} Size: {{ d.drinkSize }} ${{ d.price }}
+</p>

@@ -1,0 +1,45 @@
+<button mat-raised-button routerLink="/admin/useradmin">User Admin</button>
+<button mat-raised-button routerLink="/admin/orderadmin">Order Admin</button>
+<button mat-raised-button routerLink="/admin/storesadmin">Store Admin</button>
+<!-- {{ this.store | json }}    this works!!!!    -->
+<mat-card>
+    <form>
+        <p>updating store # {{id}}</p>
+             <mat-form-field appearance="outline">
+            <input matInput placeholder="{{store.storeName}}" [(ngModel)]="store.storeName" name="storeName"
+                required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{store.streetAddress}}" [(ngModel)]="store.streetAddress" name="streetAddress"
+                required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{store.storeState}}" [(ngModel)]="store.storeState" name="storeState"
+                required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{store.storeCity}}" [(ngModel)]="store.storeCity" name="storeCity"
+                required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{store.storeZip}}" [(ngModel)]="store.storeZip" name="storeZip" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{store.storePhone}}" [(ngModel)]="store.storePhone" name="storePhone"
+                required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="{{store.storeHours}}" [(ngModel)]="store.storeHours" name="storeHours">
+        </mat-form-field>
+
+        <mat-card-actions>
+            <button mat-raised-button type="button" (click)="updateStore(store.id, store.storeName, store.streetAddress, store.storeState, store.storeCity, store.storeZip, store.storePhone, store.storeHours)">Update Store</button>
+        </mat-card-actions>
+    </form>
+</mat-card>

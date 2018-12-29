@@ -30,16 +30,11 @@ export class AuthenticationService {
 
   login(username: string, password: string) {
     return this.http.post<any>(`https://brew2userver.herokuapp.com/user/login`, {user: {username, password }})
-    // return this.http.post<any>(`http://localhost:3000/user/login`, {user: {username, password }})
     .pipe(map(user => {
-      // SAM /////////////////// fix this
       if (user && user) {
           localStorage.setItem('token', user.sessiontoken);
           localStorage.setItem('user', user.user);
-          // localStorage.setItem('userID', user.id);
       }
-
-      
       return user;
   }));
 }

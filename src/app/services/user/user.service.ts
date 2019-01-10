@@ -27,7 +27,7 @@ export class UserService {
 // https://brew2u-server.herokuapp.com/user/signup
 
   register(email, username, password, firstName, lastName, userAddress, userSecondAddress, userCity, userState, userZipcode, phoneNumber, isAdmin) {
-    return this.http.post<any>(`https://brew2userver.herokuapp.com/user/signup`, { user: { email, username, password, firstName, lastName, userAddress, userSecondAddress, userCity, userState, userZipcode, phoneNumber, isAdmin } })
+    return this.http.post<any>(`https://brew2u-server.herokuapp.com/user/signup`, { user: { email, username, password, firstName, lastName, userAddress, userSecondAddress, userCity, userState, userZipcode, phoneNumber, isAdmin } })
       .pipe(map(user => {
         if (user && user) {
           localStorage.setItem('token', user.sessionToken);
